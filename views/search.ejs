@@ -1,0 +1,26 @@
+<%- include("partials/header") %>
+<body class="landing">
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div id="content">
+				<h1>Search any Movie</h1>
+				<h3>Uses an API to search through movies</h3>
+				<hr>
+				
+				<form action="results" method="GET">
+					<form class="form-horizontal">
+  			<div class="form-group">
+    			<div class="col-sm-10">
+      				<input type="text" class="form-control" name="search" placeholder="search movie">
+    			</div>
+  			</div>
+		<button type="submit" name="search" class="btn btn-warning"><i class="fa fa-film"></i> Submit</button>
+					</form>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<%- include("partials/footer") %>

@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+<div class="container center">
+	<% var counter = 0; %>
+
+		<% data["Search"].forEach((movie) =>{ %>
+			<% if(movie["Poster"] == "N/A") { %>
+				<img src=""/>
+			<% } else { %>
+				<div class="padding">
+					<h4><%= movie["Title"] %></h4>
+					<h4><%= movie["Year"] %></h4>
+					<h4><%= movie["Type"] %></h4>
+					<img src="<%= movie["Poster"] %>" class="img"/>
+				</div>
+			<% counter++ %>	
+		<% } %>
+	<% }); %>
+
+	<% if(counter == 1) { %>
+		<h1>1 result found</h1>
+	<% } else if(counter == 0) { %>
+		<h1>Movie not found</h1>
+	<% } else { %>
+		<h1><%= counter %> results found</h1>
+	<% } %>
+</div>
+
+<%- include("partials/footer") %>
